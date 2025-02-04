@@ -1,0 +1,84 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Main Menu Overlay -->
+    <div id="mainMenu">
+      <h1>Snake Game</h1>
+      <label for="difficultySelect">Difficulty:</label>
+      <select id="difficultySelect">
+        <option value="easy" style="background-color: #dff0d8; color: #3c763d;">Easy</option>
+        <option value="normal" selected style="background-color: #d9edf7; color: #31708f;">Normal</option>
+        <option value="hard" style="background-color: #f2dede; color: #a94442;">Hard</option>
+        <option value="extreme" style="background-color: #fcf8e3; color: #8a6d3b;">Extreme</option>
+      </select>
+      <button id="startGameButton">Start Game</button>
+      
+      <button id="shopButton">Shop</button>
+      <p id="joinCount">Players Joined: 0</p>
+      <div id="shopModal">
+        <div id="shopModalContent">
+          <h2>Snake Color Shop</h2>
+          <div class="shopItem">
+            <div class="colorPreview" style="background-color: #0f0;"></div>
+            <span>Green</span>
+            <button class="equipButton" data-color="#0f0">Equip</button>
+          </div>
+          <div class="shopItem">
+            <div class="colorPreview" style="background-color: #00f;"></div>
+            <span>Blue</span>
+            <button class="equipButton" data-color="#00f">Equip</button>
+          </div>
+          <div class="shopItem">
+            <div class="colorPreview" style="background-color: #800080;"></div>
+            <span>Purple</span>
+            <button class="equipButton" data-color="#800080">Equip</button>
+          </div>
+          <div class="shopItem">
+            <div class="colorPreview" style="background-color: #FFA500;"></div>
+            <span>Orange</span>
+            <button class="equipButton" data-color="#FFA500">Equip</button>
+          </div>
+          <button id="shopCloseButton">Close</button>
+        </div>
+      </div>
+      <button id="helpButton">Help</button>
+      <div id="helpModal">
+        <div id="helpModalContent">
+          <h2>How to Play</h2>
+          <p>Use Arrow keys or WASD to control the snake.</p>
+          <p>Eat the red food to grow.</p>
+          <p>Avoid collisions with walls and your own tail.</p>
+          <p>Press any key to restart when the game is over.</p>
+          <p>Your score is tracked along with the global max score.</p>
+          <p>Have fun!</p>
+          <button id="helpCloseButton">Close</button>
+        </div>
+      </div>
+    </div>
+    <div id="gameContainer" style="display: none;">
+      <canvas id="gameCanvas" width="600" height="600"></canvas>
+      <div id="score">Score: 0</div>
+      <div id="globalMaxScore">Max Score: 0</div>
+      <div id="gameOver">
+        <div class="gameOverText">Game Over</div>
+        <div class="restartText">Press any key to Restart</div>
+      </div>
+      <div id="pauseMenu">
+        <h1>Paused</h1>
+        <button id="resumeButton">Resume</button>
+        <button id="quitButton">Quit</button>
+      </div>
+    </div>
+    
+    <script src="snake.js" defer></script>
+  </body>
+</html>

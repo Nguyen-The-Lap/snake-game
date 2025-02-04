@@ -1,0 +1,297 @@
+/* Basic reset and body styles */
+body {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* Canvas centered with a solid border */
+canvas {
+  background-color: #333;
+  border: 2px solid #fff;
+  margin-top: 20px;
+}
+
+/* Score display styling */
+#score {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+/* Global Max Score display styling */
+#globalMaxScore {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+/* Game Over overlay styling */
+#gameOver {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2rem;
+}
+
+/* When visible, display as flex and animate fade in */
+#gameOver.visible {
+  display: flex;
+  animation: fadeIn 1s;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Help Button styling */
+#helpButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  font-size: 12px;
+  z-index: 1000;
+}
+
+#helpButton:hover {
+  background: #777;
+}
+
+/* Help Modal overlay styling */
+#helpModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+#helpModal.visible {
+  display: flex;
+}
+
+#helpModalContent {
+  background: #333;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Main Menu styling */
+#mainMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1002;
+}
+
+#mainMenu h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#startGameButton {
+  background: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 20px;
+}
+
+#startGameButton:hover {
+  background: #777;
+}
+
+#joinCount {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #ff0;
+}
+
+/* Difficulty dropdown styling */
+#difficultySelect {
+  background: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 10px;
+  outline: none;
+}
+#difficultySelect:hover {
+  background: #777;
+}
+
+/* Pause Menu styling */
+#pauseMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1003;
+}
+
+#pauseMenu.visible {
+  display: flex;
+  animation: fadeIn 0.5s;
+}
+
+#pauseMenu h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#pauseMenu button {
+  background: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 10px;
+}
+
+#pauseMenu button:hover {
+  background: #777;
+}
+
+/* Shop Button styling */
+#shopButton {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  font-size: 12px;
+  z-index: 1000;
+}
+
+#shopButton:hover {
+  background: #777;
+}
+
+/* Shop Modal overlay styling */
+#shopModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+#shopModal.visible {
+  display: flex;
+}
+
+#shopModalContent {
+  background: #333;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.shopItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.shopItem .colorPreview {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  margin-right: 10px;
+}
+
+.shopItem button.equipButton {
+  background: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.shopItem button.equipButton:hover {
+  background: #777;
+}
+
+#shopCloseButton {
+  background: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+#shopCloseButton:hover {
+  background: #777;
+}
