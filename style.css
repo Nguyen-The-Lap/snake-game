@@ -139,13 +139,6 @@ canvas {
 #startGameButton:hover {
   background: #777;
 }
-
-#joinCount {
-  font-size: 20px;
-  margin-top: 10px;
-  color: #ff0;
-}
-
 /* Difficulty dropdown styling */
 #difficultySelect {
   background: #555;
